@@ -1,0 +1,21 @@
+{
+  "name": "comics.ts",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc --module umd comics.ts | browserify comics.js -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^12.7.8",
+    "axios": "^0.19.0",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0"
+  }
+}
