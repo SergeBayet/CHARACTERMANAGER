@@ -63,3 +63,10 @@ typings/
 
 # next.js build output
 .next
+
+dist
+dist/
+dist/*
+.cache
+.cache/
+.cache/*
