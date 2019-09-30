@@ -4,6 +4,12 @@ $mainDark: #2c3e50;
 $mainWhite: #ecf0f1;
 $mainRed: #e74c3c;
 
+
+@mixin MP0{
+    margin: 0 auto;
+    padding: 0;
+}
+
 @mixin bigTitle{
     font-family: "ObelixProBroken";
     font-size: 15rem;
