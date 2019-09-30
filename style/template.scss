@@ -1,0 +1,45 @@
+$mainYellow: #f1c40f;
+$mainBlue: #3498db;
+$mainDark: #2c3e50;
+$mainWhite: #ecf0f1;
+$mainRed: #e74c3c;
+
+
+@mixin MP0{
+    margin: 0 auto;
+    padding: 0;
+}
+
+@mixin bigTitle{
+    font-family: "ObelixProBroken";
+    font-size: 15rem;
+    color: $mainDark;
+}
+
+@mixin bigText{
+    font-family: "ObelixPro";
+    font-size: 15rem;
+    color: $mainDark;
+}
+
+@mixin smallText{
+    font-family: "tournedos";
+    font-size: 8rem;
+    color: $mainDark;
+}
+
+@font-face{
+    font-family: "ObelixProBroken";
+    src: url(./fonts/ObelixPro-Broken-cyr.ttf);
+};
+
+@font-face{
+    font-family: "ObelixPro";
+    src: url(./fonts/obelixpro/ObelixPro-cyr.ttf);
+    
+}
+
+@font-face{
+    font-family: "tournedos";
+    src: url(./fonts/tournedos/Tournedos\ Lite\ DEMO.otf);
+}

@@ -1,0 +1,10 @@
+@import 'template';
+
+html{
+    font-size: 62,5%;
+}
+
+body{
+    @include MP0;
+    background-color: $mainBlue;
+}
