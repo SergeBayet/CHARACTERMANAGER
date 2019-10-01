@@ -124,3 +124,8 @@ header{
 
         }
     }
+
+    #charDetails{
+        @include MP0;
+        background-color: $mainYellow;
+    }

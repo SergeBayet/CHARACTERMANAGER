@@ -142,4 +142,10 @@ header #addChar {
   margin: 0.2rem 0 0.2rem 0;
 }
 
+#charDetails {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #f1c40f;
+}
+
 /*# sourceMappingURL=style.css.map */
