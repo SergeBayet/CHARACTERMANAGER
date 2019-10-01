@@ -1,5 +1,8 @@
 import { CharactersManager } from "./comics.js";
 
+// create routes
+
+
 // create async function to fetch async data from api & CharactersManager class method
 (async () => {
   // create new
@@ -41,6 +44,7 @@ import { CharactersManager } from "./comics.js";
       }else{
           "no image";
       }
+
       //display elements
       cardContainer.appendChild(editBtn);
       cardContainer.appendChild(viewBtn);
@@ -50,6 +54,12 @@ import { CharactersManager } from "./comics.js";
       textContainer.appendChild(shortDesc);
       cardContainer.appendChild(textContainer);
       root.appendChild(cardContainer);
+
+      //buttons logic
+      viewBtn.addEventListener("click", ()=>{
+          window.open(`./character/${el.id}`, "_blank");
+      })
+
     }
     return null;
   });

@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var comics_js_1 = require("./comics.js");
+// create routes
 // create async function to fetch async data from api & CharactersManager class method
 (function () { return __awaiter(void 0, void 0, void 0, function () {
     var char, all;
@@ -89,6 +90,10 @@ var comics_js_1 = require("./comics.js");
                         textContainer.appendChild(shortDesc);
                         cardContainer.appendChild(textContainer);
                         root.appendChild(cardContainer);
+                        //buttons logic
+                        viewBtn.addEventListener("click", function () {
+                            window.open("./character/" + el.id, "_blank");
+                        });
                     }
                     return null;
                 });

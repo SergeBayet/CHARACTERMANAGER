@@ -6,7 +6,6 @@ html{
 
 body{
     @include MP0;
-    background-color: $mainBlue;
 }
 
 header{
@@ -40,15 +39,14 @@ header{
 }
 }
 
-
-   
-
     #root{
-        width: 80%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         @include MP0;
         display: flex;
         flex-wrap: wrap;
+        background-color: $mainBlue;
+        justify-content: center;
 
         .cardContainer{
             @include MP0;
@@ -127,5 +125,7 @@ header{
 
     #charDetails{
         @include MP0;
+        width: 100%;
+        height: 100vh;
         background-color: $mainYellow;
     }
