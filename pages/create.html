@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Create Character</title>
   </head>
@@ -12,13 +12,23 @@
   <body>
     <header>
       <h1 id="headTitle">COMICS Characters Manager</h1>
-      <button id="addChar"><i class="fas fa-plus" style="font-size:48px;"></i></button>
+      <button id="addChar">
+        <a href="/pages/create.html">ADD</a>
+      </button>
     </header>
-      <div id="charDetails">
-        test
-      </div>
+    
+    <section>
+        <div id="charDetails">
+          <form action="">
+            <div> Character Name : <input type="text" name="name" required placeholder="Concombre Masqué" id="newName"></div>
+            <div>Short description : <input type="text" name="shortDescription" placeholder="Petit, vert et masqué" id="newShortDesc"></div>
+            <div>Description : <textarea name="description" id="" cols="30" rows="10" placeholder="Enter description here..." id="newDesc"></textarea></div>
+            <button type="submit" id="sendChar">OK</button>
+          </form>
+        </div>
+      </section>
   
   
-      <script src="../scripts/display.js"></script>
+      <script src="../scripts/create.js"></script>
     </body>
 </html>

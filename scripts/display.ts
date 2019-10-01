@@ -75,3 +75,4 @@ import { CharactersManager } from "./comics.js";
 
   console.log("all:", all);
 })();
+
