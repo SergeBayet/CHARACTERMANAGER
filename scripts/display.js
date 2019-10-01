@@ -74,13 +74,29 @@ var comics_js_1 = require("./comics.js");
                         shortDesc.innerText = el.shortDescription;
                         editBtn.innerText = "Edit";
                         deleteBtn.innerText = "Delete";
-                        viewBtn.innerText = "View";
                         if (el.image !== undefined) {
                             cardImage.setAttribute("src", "data:image/jpeg;base64," + el.image);
                         }
                         else {
                             "no image";
                         }
+                        // create view button
+                        var link = document.createElement("a");
+                        link.setAttribute("href", "/character.html"); ///${el.id}
+                        link.innerText = "view";
+                        viewBtn.appendChild(link);
+                        // create delete button
+                        deleteBtn.addEventListener("click", function () { return __awaiter(void 0, void 0, void 0, function () {
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0: return [4 /*yield*/, char.deleteCharacter(el.id)];
+                                    case 1:
+                                        _a.sent();
+                                        location.reload();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        }); });
                         //display elements
                         cardContainer.appendChild(editBtn);
                         cardContainer.appendChild(viewBtn);
@@ -91,9 +107,6 @@ var comics_js_1 = require("./comics.js");
                         cardContainer.appendChild(textContainer);
                         root.appendChild(cardContainer);
                         //buttons logic
-                        viewBtn.addEventListener("click", function () {
-                            window.open("./character/" + el.id, "_blank");
-                        });
                     }
                     return null;
                 });

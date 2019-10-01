@@ -38,12 +38,23 @@ import { CharactersManager } from "./comics.js";
       shortDesc.innerText = el.shortDescription;
       editBtn.innerText = "Edit";
       deleteBtn.innerText = "Delete";
-      viewBtn.innerText = "View";
       if (el.image !== undefined) {
         cardImage.setAttribute("src", `data:image/jpeg;base64,${el.image}`);
       }else{
           "no image";
       }
+
+      // create view button
+      const link = document.createElement("a");
+      link.setAttribute("href", `/character.html`);///${el.id}
+      link.innerText="view";
+      viewBtn.appendChild(link);
+
+      // create delete button
+      deleteBtn.addEventListener("click", async()=>{
+        await char.deleteCharacter(el.id);
+        location.reload();
+      })
 
       //display elements
       cardContainer.appendChild(editBtn);
@@ -56,9 +67,7 @@ import { CharactersManager } from "./comics.js";
       root.appendChild(cardContainer);
 
       //buttons logic
-      viewBtn.addEventListener("click", ()=>{
-          window.open(`./character/${el.id}`, "_blank");
-      })
+      
 
     }
     return null;
