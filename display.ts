@@ -29,22 +29,29 @@ import { CharactersManager } from "./comics.js";
     const shortDesc = document.createElement("p") as HTMLElement;
     shortDesc.setAttribute("class", "shortDesc");
 
-    //attach data to elements
-    cardName.innerText = el.name;
-    shortDesc.innerText = el.shortDescription;
-
-    //display elements
-    cardContainer.appendChild(editBtn);
-    cardContainer.appendChild(viewBtn);
-    cardContainer.appendChild(deleteBtn);
-    cardContainer.appendChild(cardImage);
-    textContainer.appendChild(cardName);
-    textContainer.appendChild(shortDesc)
-    cardContainer.appendChild(textContainer);
-    root.appendChild(cardContainer);
-
-    
-
+    if (el.name !== undefined) {
+      //attach data to elements
+      cardName.innerText = el.name;
+      shortDesc.innerText = el.shortDescription;
+      editBtn.innerText = "Edit";
+      deleteBtn.innerText = "Delete";
+      viewBtn.innerText = "View";
+      if (el.image !== undefined) {
+        cardImage.setAttribute("src", `data:image/jpeg;base64,${el.image}`);
+      }else{
+          "no image";
+      }
+      //display elements
+      cardContainer.appendChild(editBtn);
+      cardContainer.appendChild(viewBtn);
+      cardContainer.appendChild(deleteBtn);
+      cardContainer.appendChild(cardImage);
+      textContainer.appendChild(cardName);
+      textContainer.appendChild(shortDesc);
+      cardContainer.appendChild(textContainer);
+      root.appendChild(cardContainer);
+    }
+    return null;
   });
 
   console.log("all:", all);

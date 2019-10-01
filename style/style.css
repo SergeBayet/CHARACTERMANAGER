@@ -28,6 +28,9 @@ header {
   display: fixed;
   top: 0;
   background-color: #f1c40f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header #headTitle {
   margin: 0 auto;
@@ -36,6 +39,18 @@ header #headTitle {
   font-size: 3rem;
   color: #2c3e50;
   padding: 1.5rem 0 1rem 1rem;
+}
+header #addChar {
+  width: 6rem;
+  height: 6rem;
+  border: none;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  background-color: #ecf0f1;
+  margin: 0 3rem 0 0;
 }
 
 #root {
@@ -66,22 +81,37 @@ header #headTitle {
   padding: 0;
   margin: 0.5rem 0.2rem 0.5rem 0.2rem;
 }
+#root .cardContainer .imgContainer img {
+  object-fit: contain;
+  max-width: 98%;
+  max-height: 98%;
+  min-height: 98%;
+}
 #root .cardContainer .editBtn {
   position: absolute;
-  width: 1.5rem;
+  left: 0.3rem;
+  top: 0.3rem;
+  width: 3rem;
   height: 1rem;
+  border: none;
   background-color: #f1c40f;
 }
 #root .cardContainer .deleteBtn {
   position: absolute;
-  width: 1.5rem;
+  top: 5rem;
+  right: 0.3rem;
+  width: 3rem;
   height: 1rem;
+  border: none;
   background-color: #e74c3c;
 }
 #root .cardContainer .viewBtn {
   position: absolute;
-  width: 1.5rem;
+  top: 0.3rem;
+  right: 0.3rem;
+  width: 3rem;
   height: 1rem;
+  border: none;
   background-color: #2ecc71;
 }
 #root .cardContainer .cardTextContainer {

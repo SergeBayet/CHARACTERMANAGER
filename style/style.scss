@@ -16,12 +16,28 @@ header{
     display: fixed;
     top: 0;
     background-color: $mainYellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     #headTitle{
         @include MP0;
         @include bigTitle;
         padding: 1.5rem 0 1rem 1rem;
     }
+
+    #addChar{
+        width: 6rem;
+        height: 6rem;
+        border: none;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        background-color: $mainWhite;
+        margin: 0 3rem 0 0 ;
+}
 }
 
 
@@ -51,22 +67,35 @@ header{
                 height: 50%;
                 @include MP0;
                 margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+
+                img{
+                    object-fit: contain;
+                    max-width: 98%;
+                    max-height: 98%;
+                    min-height: 98%;
+                }
             }
 
             .editBtn{
                 position: absolute;
+                left: 0.3rem;
+                top: 0.3rem;
                 @include btnSize;
                 background-color: $mainYellow;            
             }
 
             .deleteBtn{
                 position: absolute;
+                top: 5rem;
+                right: 0.3rem;
                 @include btnSize;
                 background-color: $mainRed;
             }
 
             .viewBtn{
                 position: absolute;
+                top: 0.3rem;
+                right: 0.3rem;
                 @include btnSize;
                 background-color: $mainGreen;
 
