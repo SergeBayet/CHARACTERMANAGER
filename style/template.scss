@@ -3,6 +3,7 @@ $mainBlue: #3498db;
 $mainDark: #2c3e50;
 $mainWhite: #ecf0f1;
 $mainRed: #e74c3c;
+$mainGreen: #2ecc71;
 
 
 @mixin MP0{
@@ -12,20 +13,29 @@ $mainRed: #e74c3c;
 
 @mixin bigTitle{
     font-family: "ObelixProBroken";
-    font-size: 15rem;
+    font-size: 3rem;
     color: $mainDark;
 }
 
 @mixin bigText{
     font-family: "ObelixPro";
-    font-size: 15rem;
+    font-size: 0.8rem;
     color: $mainDark;
+    text-align: center;
+    margin: 0.2rem 0 0.2rem 0;
 }
 
 @mixin smallText{
     font-family: "tournedos";
-    font-size: 8rem;
+    font-size: 1rem;
     color: $mainDark;
+    text-align: center;
+    margin: 0.2rem 0 0.2rem 0;
+}
+
+@mixin btnSize{
+    width: 1.5rem;
+    height: 1rem;
 }
 
 @font-face{

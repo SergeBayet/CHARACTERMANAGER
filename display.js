@@ -37,16 +37,49 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var comics_js_1 = require("./comics.js");
+// create async function to fetch async data from api & CharactersManager class method
 (function () { return __awaiter(void 0, void 0, void 0, function () {
     var char, all;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                char = new comics_js_1.CharactersManager;
-                console.log(char);
+                char = new comics_js_1.CharactersManager();
                 return [4 /*yield*/, char.getCharacters()];
             case 1:
                 all = _a.sent();
+                //display cards
+                all.forEach(function (el) {
+                    //setup card display
+                    var root = document.querySelector("#root");
+                    var cardContainer = document.createElement("div");
+                    cardContainer.setAttribute("class", "cardContainer");
+                    var cardImage = document.createElement("img");
+                    cardImage.setAttribute("class", "imgContainer");
+                    var editBtn = document.createElement("button");
+                    editBtn.setAttribute("class", "editBtn");
+                    var deleteBtn = document.createElement("button");
+                    deleteBtn.setAttribute("class", "deleteBtn");
+                    var viewBtn = document.createElement("button");
+                    viewBtn.setAttribute("class", "viewBtn");
+                    var textContainer = document.createElement("div");
+                    textContainer.setAttribute("class", "cardTextContainer");
+                    var cardName = document.createElement("h3");
+                    cardName.setAttribute("class", "cardName");
+                    var shortDesc = document.createElement("p");
+                    shortDesc.setAttribute("class", "shortDesc");
+                    //attach data to elements
+                    cardName.innerText = el.name;
+                    shortDesc.innerText = el.shortDescription;
+                    //display elements
+                    cardContainer.appendChild(editBtn);
+                    cardContainer.appendChild(viewBtn);
+                    cardContainer.appendChild(deleteBtn);
+                    cardContainer.appendChild(cardImage);
+                    textContainer.appendChild(cardName);
+                    textContainer.appendChild(shortDesc);
+                    cardContainer.appendChild(textContainer);
+                    root.appendChild(cardContainer);
+                });
                 console.log("all:", all);
                 return [2 /*return*/];
         }

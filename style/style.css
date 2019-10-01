@@ -21,9 +21,95 @@ body {
 }
 
 header {
+  margin: 0 auto;
+  padding: 0;
   width: 100%;
-  height: 15rem;
+  height: 8rem;
+  display: fixed;
+  top: 0;
   background-color: #f1c40f;
+}
+header #headTitle {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "ObelixProBroken";
+  font-size: 3rem;
+  color: #2c3e50;
+  padding: 1.5rem 0 1rem 1rem;
+}
+
+#root {
+  width: 80%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#root .cardContainer {
+  margin: 0 auto;
+  padding: 0;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 8rem;
+  height: 12rem;
+  background-color: #2c3e50;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+#root .cardContainer .imgContainer {
+  width: 90%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 0;
+  margin: 0.5rem 0.2rem 0.5rem 0.2rem;
+}
+#root .cardContainer .editBtn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1rem;
+  background-color: #f1c40f;
+}
+#root .cardContainer .deleteBtn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1rem;
+  background-color: #e74c3c;
+}
+#root .cardContainer .viewBtn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1rem;
+  background-color: #2ecc71;
+}
+#root .cardContainer .cardTextContainer {
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  height: 45%;
+  background-color: #ecf0f1;
+  border-radius: 0.5rem;
+  margin: 0.1rem 0.2rem 0.5rem 0.2rem;
+}
+#root .cardContainer .cardTextContainer .cardName {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "ObelixPro";
+  font-size: 0.8rem;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0.2rem 0 0.2rem 0;
+}
+#root .cardContainer .cardTextContainer .shortDesc {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "tournedos";
+  font-size: 1rem;
+  color: #2c3e50;
+  text-align: center;
+  margin: 0.2rem 0 0.2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
