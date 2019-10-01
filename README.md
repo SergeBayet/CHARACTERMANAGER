@@ -8,6 +8,8 @@ ChaMan, for Character Manager, is a project between learners of Hamilton 2.12 an
 * *Florent Bruyers* (Captain Angleur),
 * *Florence Vermeerbergen* (Tentacle Lady).
 
+![BeCodians Logo](/images/becodians.png)
+
 ## Web Version
 [__API on Postman__](chaman.postman.co).
 
