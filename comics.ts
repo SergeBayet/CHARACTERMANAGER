@@ -1,13 +1,13 @@
 const axios = require("axios");
 
-class CharactersManager {
+export class CharactersManager {
   public getCharacters() {
-    axios
+    return axios
       .get("https://character-database.becode.xyz/characters")
-      .then((response: any) => {
-        console.log(response.data);
-        this.displayCharacters(response.data);
-        return true;
+      .then ((response: any) => {
+        // console.log(response.data);
+        // this.displayCharacters(response.data);
+        return response.data;
       })
       .catch((err: any) => {
         console.log(err);
@@ -15,12 +15,12 @@ class CharactersManager {
       });
   }
   public getCharacter(id: string) {
-    axios
+    return axios
       .get("https://character-database.becode.xyz/characters/" + id)
       .then((response: any) => {
-        console.log(response.data);
-        this.displayCharacter(response.data);
-        return true;
+        // console.log(response.data);
+        // this.displayCharacter(response.data);
+        return response.data;
       })
       .catch((err: any) => {
         console.log(err);
@@ -41,7 +41,7 @@ class CharactersManager {
       description,
       image
     };
-    axios({
+    return axios({
       method: "put",
       url: "https://character-database.becode.xyz/characters/",
       data: json
@@ -55,7 +55,7 @@ class CharactersManager {
       });
   }
   public deleteCharacter(id: string) {
-    axios
+    return axios
       .delete("https://character-database.becode.xyz/characters/" + id)
       .then((response: any) => {
         return true;
@@ -77,7 +77,7 @@ class CharactersManager {
       description,
       image
     };
-    axios({
+    return axios({
       method: "post",
       url: "https://character-database.becode.xyz/characters/",
       data: json
@@ -90,12 +90,12 @@ class CharactersManager {
         return false;
       });
   }
-  public displayCharacters(table: []) {
-    console.log(table);
-  }
-  public displayCharacter(table: []) {
-    console.log(table);
-  }
+  // public displayCharacters(table: []) {
+  //   console.log(table);
+  // }
+  // public displayCharacter(table: []) {
+  //   console.log(table);
+  // }
   public getBase64(file: File) {
     let reader = new FileReader();
     reader.readAsDataURL(file);
@@ -109,8 +109,7 @@ class CharactersManager {
   }
 }
 
-let characters = new CharactersManager();
-
 //characters.addCharacter("SuperSerge", "Développeur", "Dev", "CDS");
 
-characters.getCharacters();
+
+
